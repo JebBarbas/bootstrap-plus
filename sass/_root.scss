@@ -1,0 +1,5 @@
+:root{
+    @each $color, $hexvalue in $bsp-colors{
+        --bsp-#{$color} : #{$hexvalue}; 
+    }
+}

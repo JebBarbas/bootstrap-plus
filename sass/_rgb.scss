@@ -1,0 +1,371 @@
+$rgb: var(--bsp-rgb);
+$light : #FFF;
+$light-filter: brightness(140%);
+$disabled-filter: brightness(105%);
+$hover-filter: brightness(90%);
+$contrast: #FFF;
+
+.alert-rgb{
+    color: $rgb;
+    background-color: $light;
+    border-color: $light;
+
+    & hr{
+        border-top-color: $rgb;
+    }
+
+    & .alert-link{
+        color: $rgb;
+        filter: $hover-filter;
+    }
+}
+
+.bg-rgb{
+    background-color: $rgb !important;
+}
+
+.badge-rgb{
+    color: $contrast;
+    background-color: $rgb;
+}
+
+a.badge-rgb{
+    &:focus,&:hover{
+        color: $contrast;
+        filter: $hover-filter;
+    }
+
+    &.focus,&:focus{
+        outline: 0;
+        filter: $hover-filter
+    }
+}
+
+.border-rgb{
+    border-color: $rgb !important;
+}
+
+.btn-rgb{
+    color: $contrast;
+    background-color: $rgb;
+    border-color: $rgb;
+
+    &:hover{
+        color: $contrast;
+        background-color: $rgb;
+        border-color: $rgb;
+        filter: $hover-filter;
+    }
+
+    &.focus,&:focus{
+        color: $contrast;
+        background-color: $rgb;
+        border-color: $rgb;
+        filter: $hover-filter;
+        box-shadow: 0 0 0 0.2rem $rgb;
+    }
+
+    &.disabled,&:disabled{
+        color: $contrast;
+        background-color: $rgb;
+        border-color: $rgb;
+        filter: $disabled-filter;
+    }
+
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    
+        &:active,
+        &.active {
+            box-shadow: 0 0 0 0.2rem $rgb;
+    
+            &:focus {
+                box-shadow: 0 0 0 0.2rem $rgb;
+                filter: $hover-filter;
+            }
+        }
+    }
+}
+
+.btn-outline-rgb{
+    color: $rgb;
+    border-color: $rgb;
+
+    &:hover{
+        color: $contrast;
+        background-color: $rgb;
+        border-color: $rgb;
+        filter: $hover-filter;
+    }
+
+    &.focus,&:focus{
+        color: $contrast;
+        background-color: $rgb;
+        border-color: $rgb;
+        filter: $hover-filter;
+        box-shadow: 0 0 0 0.2rem $rgb;
+    }
+
+    &.disabled,&:disabled{
+        color: $rgb;
+        filter: $disabled-filter;
+        background-color: transparent;
+        border-color: $rgb;
+    }
+
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    
+        &:active,
+        &.active {
+            box-shadow: 0 0 0 0.2rem $rgb;
+    
+            &:focus {
+                box-shadow: 0 0 0 0.2rem $rgb;
+                filter: $hover-filter;
+            }
+        }
+    }
+}
+
+.callout-rgb{
+    border-color: $rgb;
+
+    & .callout-text{
+        color: $rgb;
+    }
+
+    & .callout-link{
+        color: $rgb;
+    }
+
+    & hr {
+        border-top-color: $rgb;
+    }
+}
+
+.circle-rgb{
+    background-color: $rgb;
+    border-color: $rgb;
+    color: $contrast;
+    filter: $disabled-filter;
+}
+
+.form-check-input-rgb{
+    color: $rgb;
+    &:checked {
+        background-color: $rgb;
+        border-color: $rgb;
+    }
+}
+
+.jumbotron-rgb{
+    color: $contrast;
+    background-color: $rgb;
+
+    & hr{
+        border-top-color: $rgb;
+    }
+}
+
+.minilert-rgb{
+    color: $rgb;
+    background-color: transparent;
+    border-color: $rgb;
+
+    & hr{
+        border-top-color: $rgb;
+    }
+
+    & .alert-link{
+        color: rgb;
+        filter: $hover-filter;
+    }
+}
+
+.list-group-item-rgb{
+    color: $rgb;
+    background-color: $rgb;
+    filter: $light-filter;
+
+    &.list-group-item-action:focus, &.list-group-item-action:hover{
+        color: $rgb;
+        filter: $hover-filter;
+    }
+
+    &.list-group-item-action.active{
+        color: $contrast;
+        background-color: $rgb;
+        border-color: $rgb;
+    }
+}
+
+.login-rgb{
+    background-color: $rgb;
+    hr{
+        border: 1px solid $rgb;
+    }
+    a, .btn-link{
+        color: $rgb;
+    }
+    .login-form{
+        .login-group{
+            .login-control{
+                &:focus ~ .login-label,
+                &.focus ~ .login-label,
+                &:valid ~ .login-label,
+                &.valid ~ .login-label{
+                    color: $rgb;
+                }
+            }
+        }
+    }
+}
+
+.btn-neon-rgb{
+    position: relative;
+    color: $rgb;
+    overflow: hidden;
+
+    &.btn-neon-snake .btn-neon-border:nth-child(1){
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+    
+        background: linear-gradient(90deg, transparent,$rgb);
+        animation: neonborder1 1s linear infinite;
+    }
+    &.btn-neon-snake .btn-neon-border:nth-child(2){
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+    
+        background: linear-gradient(180deg, transparent, $rgb);
+        animation: neonborder2 1s linear infinite;
+        animation-delay: 0.25s;
+    }
+    &.btn-neon-snake .btn-neon-border:nth-child(3){
+        bottom: 0;
+        right: -100%;
+        height: 2px;
+        width: 100%;
+    
+        background: linear-gradient(270deg, transparent, $rgb);
+        animation: neonborder3 1s linear infinite;
+        animation-delay: 0.50s;
+    }
+    &.btn-neon-snake .btn-neon-border:nth-child(4){
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+    
+        background: linear-gradient(0deg, transparent, $rgb);
+        animation: neonborder4 1s linear infinite;
+        animation-delay: 0.75s;
+    }
+    
+    &:hover{
+        color: $contrast;
+        background-color: $rgb;
+        box-shadow: 0 0 5px $rgb,
+                    0 0 25px $rgb,
+                    0 0 50px $rgb,
+                    0 0 200px $rgb;
+    }
+
+    &.focus,&:focus{
+        color: $contrast;
+        background-color: $rgb;
+        box-shadow: 0 0 5px $rgb,
+                    0 0 25px $rgb,
+                    0 0 50px $rgb,
+                    0 0 200px $rgb;
+    }
+
+    &.disabled,&:disabled{
+        color: $rgb;
+        background-color: transparent;
+        filter: $disabled-filter;
+    }
+
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    
+        &:active,
+        &.active {
+            box-shadow: 0 0 0 0.2rem $rgb;
+    
+            &:focus {
+                box-shadow: 0 0 0 0.2rem $rgb;
+                filter: $hover-filter;
+            }
+        }
+    }
+}
+
+.sidebar-rgb{
+    background-color: $rgb;
+    color: $contrast;
+    hr{
+        border-top-color: $rgb;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+    .sidebar-brand{
+        a{
+            color: $contrast;
+        }
+    }
+    .sidebar-nav{
+        .sidebar-item{
+            .sidebar-link{
+                color: $contrast;
+            }
+            &.active{
+                .sidebar-link{
+                    background-color: $rgb;
+                    filter: $hover-filter;
+                }
+            }
+        }
+    }
+
+    .sidebar-item:hover{
+        .sidebar-link{
+            background-color: $rgb;
+            filter: $hover-filter;
+        }
+    }
+}
+
+.table-rgb{
+    &, > th, > td {
+        background-color: $rgb;
+        filter: $light-filter;
+    }
+
+    th, td, thead th, tbody + tbody {
+    border-color: $rgb;
+  }
+}
+
+.table-hover {
+    .table-rgb {
+        &:hover {
+            background-color: $rgb;
+
+            > td, > th {
+                background-color: $rgb;
+                filter: $hover-filter;
+            }
+        }
+    }
+}
+
+.text-rgb{
+    color: $rgb !important;
+}
+

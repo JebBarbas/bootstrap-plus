@@ -1,0 +1,5 @@
+@each $color, $hexvalue in $bsp-colors{
+    .border-#{$color}{
+        border-color: $hexvalue !important;
+    }
+}

@@ -1,0 +1,9 @@
+@each $color, $hexvalue in $all-colors{
+    .form-check-input-#{$color}{
+        color: $hexvalue;
+        &:checked {
+            background-color: $hexvalue;
+            border-color: $hexvalue;
+        }
+    }
+}

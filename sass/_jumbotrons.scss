@@ -1,0 +1,19 @@
+/* Como en bs5 ya no hay jumbotron, pues lo pongo aqui, no pasa nada */
+.jumbotron{
+    position: relative;
+    background-color: map-get($bsp-colors, 'silver' );
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+}
+
+@each $color, $hexvalue in $all-colors{
+    .jumbotron-#{$color}{
+        color: contrast($color);
+        background-color: $hexvalue;
+
+        & hr{
+            border-top-color: $hexvalue;
+        }
+    }
+}

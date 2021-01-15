@@ -1,0 +1,5 @@
+@each $color, $hexvalue in $bsp-colors{
+    .bg-#{$color}{
+        background-color: $hexvalue !important;
+    }
+}

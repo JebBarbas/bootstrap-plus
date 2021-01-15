@@ -1,0 +1,84 @@
+$bs-colors: (
+    'primary': #0D6EFD,
+    'secondary': #6C757D,
+    'success': #198754,
+    'info': #0DCAF0,
+    'warning':#FFC107,
+    'danger': #DC3545,
+    'white': #FFFFFF,
+    'light': #F8F9Fa,
+    'dark': #212529,
+);
+
+$bsp-colors: (
+    'magic': #AE42BD,
+    'juice': #FD9800,
+    'ocean': #00CCA3,
+    'cake': #FFB4BF,
+    'brick': #800040,
+    'blood': #CC0000,
+    'mustard': #D69D30,
+    'militar': #F0E68C,
+    'lapislazuli': #002FA7,
+    'grass': #78D64B,
+    'leaf': #44883E,
+    'coral': #FF6F61,
+    'love': #E5097F,
+    'clay': #E8C39E,
+    'chocolate': #8B4513,
+    'elegant': #000000,
+    'silver': #E9ECEF,
+    'neonblue': #0000FF,
+    'neongreen': #00FF00,
+    'neoncyan': #00FFFF,
+    'neonred': #FF0000,
+    'neonmagenta': #FF00FF,
+    'neonyellow': #FFFF00,
+);
+
+$all-colors: map-merge($bs-colors, $bsp-colors);
+
+$contrast-light: #FFFFFF;
+$contrast-dark: #212529;
+$contrasts: (
+    'primary': $contrast-light,
+    'secondary': $contrast-light,
+    'success': $contrast-light,
+    'info': $contrast-dark,
+    'warning': $contrast-dark,
+    'danger': $contrast-light,
+    'white': $contrast-dark,
+    'light': $contrast-dark,
+    'dark': $contrast-light,
+    'magic': $contrast-light,
+    'juice': $contrast-light,
+    'ocean': $contrast-light,
+    'cake': $contrast-dark,
+    'brick': $contrast-light,
+    'blood': $contrast-light,
+    'mustard': $contrast-light,
+    'militar': $contrast-dark,
+    'lapislazuli': $contrast-light,
+    'grass': $contrast-dark,   
+    'leaf': $contrast-light,
+    'coral': $contrast-dark,
+    'love': $contrast-light,
+    'clay': $contrast-dark,
+    'chocolate': $contrast-light,
+    'elegant': $contrast-light,
+    'silver': $contrast-dark,
+    'neonblue': $contrast-light,
+    'neongreen': $contrast-light,
+    'neoncyan': $contrast-dark,
+    'neonred': $contrast-light,
+    'neonmagenta': $contrast-light,
+    'neonyellow': $contrast-dark,
+);
+
+$centerpoints: (
+    '0': 90vw,
+    '576px': 80vw,
+    '768px': 60vw,
+    '992px': 40vw,
+    '1200px': 40vw
+);
